@@ -10,6 +10,8 @@
         {{item.title}}
       </li>
     </ul>
+    <hr/>
+    <button v-on:click="greet">Say Greeting</button>
   </div>
 </template>
 
@@ -26,6 +28,11 @@
           {title: "React"},
           {title: "Ionic"}
         ]
+      }
+    },
+    methods: {
+      greet: function () {
+        alert("Hello Folks !!!");
       }
     }
   }
