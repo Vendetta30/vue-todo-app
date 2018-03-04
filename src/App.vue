@@ -1,13 +1,18 @@
 <template>
   <div id="app">
     {{msg}}
+    <test/>
   </div>
 </template>
 
 <script>
+  import Test from './components/Test';
 
   export default {
     name: 'App',
+    components: {
+      Test
+    },
     data() {
       return {
         msg: "Welcome to Vue Era"
