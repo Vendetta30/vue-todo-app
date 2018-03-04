@@ -12,6 +12,8 @@
     </ul>
     <hr/>
     <button v-on:click="greet">Say Greeting</button>
+    <hr/>
+    <input type="text" v-on:keyup="pressKey" v-on:keyup.enter="enterHit"/>
   </div>
 </template>
 
@@ -33,6 +35,12 @@
     methods: {
       greet: function () {
         alert("Hello Folks !!!");
+      },
+      pressKey: function (e) {
+        console.log(e.target.value);
+      },
+      enterHit: function (e) {
+        console.log('You hit enter');
       }
     }
   }
