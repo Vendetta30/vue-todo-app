@@ -25,23 +25,7 @@
     data() {
       return {
         newUser: {},
-        users: [
-          {
-            name: 'Vijay Shukla',
-            email: 'vijay@nexthoughts.com',
-            contacted: false
-          },
-          {
-            name: 'Ali Tanwir',
-            email: 'ali@nexthoughts.com',
-            contacted: false
-          },
-          {
-            name: 'abc pqr',
-            email: 'vshukla684@gmail.com',
-            contacted: false
-          }
-        ]
+        users: []
       }
     },
     methods: {
@@ -56,6 +40,12 @@
       removeUser: function (user) {
         this.users.splice(this.users.indexOf(user), 1);
       }
+    },
+    created: function () {
+      this.$http.get('https://jsonplaceholder.typicode.com/users')
+        .then(function (response) {
+          this.users = response.data;
+        });
     }
   }
 </script>
