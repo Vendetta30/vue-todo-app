@@ -17,13 +17,22 @@
     <hr/>
     <label>First Name</label>: <input type="text" v-model="user.firstName"/><br/>
     <label>Last Name</label>: <input type="text" v-model="user.lastName"/>
-    <br/>{{fullName}}
+    <br/>
+    <h2>{{fullName}}</h2>
+    <hr/>
+    <h1>{{msg}}</h1>
   </div>
 </template>
 
 <script>
   export default {
     name: "test",
+    props: {
+      msg: {
+        type: String,
+        default: 'Foobar'
+      }
+    },
     data() {
       return {
         title: "Hello World",

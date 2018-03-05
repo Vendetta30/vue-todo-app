@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     {{msg}}
-    <test/>
+    <test msg="From Parent"/>
   </div>
 </template>
 
