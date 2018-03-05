@@ -9,7 +9,7 @@
       <input type="submit" value="Submit"/>
     </form>
     <ul>
-      <li v-for="user in users" v-bind:key="user">
+      <li v-for="(user, index) in users" v-bind:key="index">
         <input type="checkbox" class="toggle" v-model="user.contacted"/>
         <span :class="{contacted:user.contacted}">
           {{user.name}}: {{user.email}}&nbsp;<button v-on:click="removeUser(user)">x</button>
@@ -21,7 +21,7 @@
 
 <script>
   export default {
-    name: "user",
+    name: "User",
     data() {
       return {
         newUser: {},

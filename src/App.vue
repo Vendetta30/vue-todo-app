@@ -1,20 +1,15 @@
 <template>
   <div id="app">
-    {{msg}}
-    <!--<test msg="From Parent"/>-->
-    <user/>
+    {{msg}}<br/>
+    <router-link :to="{name:'User'}">User</router-link>
+    <router-link to="/test">Test</router-link>
+    <router-view/>
   </div>
 </template>
 
 <script>
-  import Test from './components/Test';
-  import User from './components/User';
-
   export default {
     name: 'App',
-    components: {
-      Test, User
-    },
     data() {
       return {
         msg: "Welcome to Vue Era"

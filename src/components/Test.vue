@@ -6,7 +6,7 @@
     <p v-else v-text="user.lastName"></p>
     <hr/>
     <ul>
-      <li v-for="item in items" v-bind:key="item">
+      <li v-for="(item, index) in items" :key='index'>
         {{item.title}}
       </li>
     </ul>
@@ -26,7 +26,7 @@
 
 <script>
   export default {
-    name: "test",
+    name: "Test",
     props: {
       msg: {
         type: String,
