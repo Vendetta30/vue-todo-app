@@ -1,17 +1,19 @@
 <template>
   <div id="app">
     {{msg}}
-    <test msg="From Parent"/>
+    <!--<test msg="From Parent"/>-->
+    <user/>
   </div>
 </template>
 
 <script>
   import Test from './components/Test';
+  import User from './components/User';
 
   export default {
     name: 'App',
     components: {
-      Test
+      Test, User
     },
     data() {
       return {
